@@ -17,7 +17,7 @@ members = [
     "computeshader/texture",
     "texturearray/instancing",
     "base/uioverlay",
-    "base/textoverlay",
+    "base/textoverlay", "gears",
 ]
 
 [workspace.dependencies]

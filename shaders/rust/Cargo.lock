@@ -75,6 +75,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "gears"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "glam"
 version = "0.30.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
