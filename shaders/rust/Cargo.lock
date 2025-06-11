@@ -158,6 +158,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "screenshot-mesh"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "sharpen"
 version = "0.1.0"
 dependencies = [
