@@ -149,6 +149,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "quad"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "quote"
 version = "1.0.40"
 source = "registry+https://github.com/rust-lang/crates.io-index"

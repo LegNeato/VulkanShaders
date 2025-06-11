@@ -68,7 +68,7 @@ def compile_shader(shader_dir):
                 print(f"  Created {final_path.name} (entry point: {entry_point})")
                 
                 # Special case: move to parent directory for nested shader structures
-                if shader_dir.parent.name in ["base", "descriptorsets", "dynamicuniformbuffer", "multisampling", "pipelines", "specializationconstants", "computeshader", "texturearray", "screenshot"]:
+                if shader_dir.parent.name in ["base", "descriptorsets", "dynamicuniformbuffer", "multisampling", "pipelines", "specializationconstants", "computeshader", "texturearray", "screenshot", "negativeviewportheight"]:
                     parent_dir = shader_dir.parent
                     parent_final_path = parent_dir / f"{shader_name}.{shader_type}.spv"
                     shutil.move(str(final_path), str(parent_final_path))
