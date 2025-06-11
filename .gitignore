@@ -243,3 +243,12 @@ libs/vulkan/*.so
 .vscode/*
 
 __pycache__**
+
+# Rust/cargo-gpu artifacts
+shaders/rust/target/
+shaders/rust/*/target/
+shaders/rust/manifest.json
+shaders/rust/*/manifest.json
+
+# Claude configuration
+.claude/
