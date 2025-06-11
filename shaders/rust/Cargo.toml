@@ -7,6 +7,9 @@ members = [
     "dynamicuniformbuffer/base",
     "multisampling/mesh",
     "texture",
+    "pipelines/phong",
+    "pipelines/toon",
+    "pipelines/wireframe",
     "base/uioverlay",
     "base/textoverlay",
 ]
