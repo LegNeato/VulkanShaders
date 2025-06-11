@@ -252,3 +252,6 @@ shaders/rust/*/manifest.json
 
 # Claude configuration
 .claude/
+
+# ImGui
+imgui.ini

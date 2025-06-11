@@ -84,6 +84,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "instancing"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "libm"
 version = "0.2.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
