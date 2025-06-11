@@ -124,6 +124,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "parallax"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "phong"
 version = "0.1.0"
 dependencies = [
