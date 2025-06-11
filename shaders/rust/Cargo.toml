@@ -31,6 +31,9 @@ members = [
     "ssao/gbuffer",
     "ssao/blur",
     "ssao/composition",
+    "shadowmapping/offscreen",
+    "shadowmapping/scene",
+    "shadowmapping/quad",
 ]
 
 [workspace.dependencies]

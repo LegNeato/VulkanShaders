@@ -164,6 +164,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "offscreen"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "parallax"
 version = "0.1.0"
 dependencies = [
@@ -214,7 +222,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "scene"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "screenshot-mesh"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "shadowmapping-quad"
 version = "0.1.0"
 dependencies = [
  "bytemuck",
