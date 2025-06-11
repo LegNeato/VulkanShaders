@@ -43,6 +43,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "cloth"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "computeshader-texture"
 version = "0.1.0"
 dependencies = [
@@ -183,6 +191,14 @@ dependencies = [
 
 [[package]]
 name = "sharpen"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "sphere"
 version = "0.1.0"
 dependencies = [
  "bytemuck",

@@ -24,6 +24,8 @@ members = [
     "stencilbuffer/outline",
     "stencilbuffer/toon",
     "parallaxmapping/parallax",
+    "computecloth/cloth",
+    "computecloth/sphere",
 ]
 
 [workspace.dependencies]
