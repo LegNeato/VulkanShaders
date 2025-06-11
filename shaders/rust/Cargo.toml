@@ -2,7 +2,8 @@
 resolver = "2"
 members = [
     "triangle",
-    "texture",
+    "pushconstants",
+    "base/uioverlay",
 ]
 
 [workspace.dependencies]
@@ -11,5 +12,4 @@ bytemuck = { version = "1.14", features = ["derive"] }
 
 [profile.release]
 panic = "abort"
-lto = "fat"
 opt-level = 3

@@ -69,6 +69,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "pushconstants"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "quote"
 version = "1.0.40"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -118,7 +126,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "texture"
+name = "triangle"
 version = "0.1.0"
 dependencies = [
  "bytemuck",
@@ -126,7 +134,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "triangle"
+name = "uioverlay"
 version = "0.1.0"
 dependencies = [
  "bytemuck",

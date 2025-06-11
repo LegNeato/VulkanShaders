@@ -66,6 +66,13 @@ def compile_shader(shader_dir):
                 # Just rename the file - the C++ code will look for the entry point by name
                 source_path.rename(final_path)
                 print(f"  Created {final_path.name} (entry point: {entry_point})")
+                
+                # Special case: if this is in base/*, also copy to base directory
+                if shader_dir.parent.name == "base":
+                    base_dir = shader_dir.parent
+                    base_final_path = base_dir / f"{shader_name}.{shader_type}.spv"
+                    shutil.copy2(final_path, base_final_path)
+                    print(f"  Also copied to {base_dir.name}/{shader_name}.{shader_type}.spv")
         else:
             # Fallback for when no manifest exists
             shader_name = shader_dir.name
@@ -94,11 +101,23 @@ def main():
     # Check requirements
     check_requirements()
     
-    # Find all shader crates
-    shader_dirs = []
-    for item in rust_gpu_dir.iterdir():
-        if item.is_dir() and (item / "Cargo.toml").exists() and (item / "src" / "lib.rs").exists():
-            shader_dirs.append(item)
+    # Get workspace members from cargo metadata
+    try:
+        result = subprocess.run(['cargo', 'metadata', '--format-version', '1'], 
+                              capture_output=True, text=True, check=True)
+        metadata = json.loads(result.stdout)
+        
+        shader_dirs = []
+        for member in metadata['workspace_members']:
+            # Parse package ID to get the path
+            for package in metadata['packages']:
+                if package['id'] == member:
+                    package_path = Path(package['manifest_path']).parent
+                    shader_dirs.append(package_path)
+                    break
+    except (subprocess.CalledProcessError, json.JSONDecodeError, KeyError) as e:
+        print(f"Error getting workspace metadata: {e}")
+        sys.exit(1)
     
     if not shader_dirs:
         print("No shader crates found")
