@@ -158,6 +158,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "texture"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "triangle"
 version = "0.1.0"
 dependencies = [
