@@ -1,7 +1,0 @@
-[
-  {
-    "source_path": "main_cs.spv",
-    "entry_point": "main_cs",
-    "wgsl_entry_point": "main_cs"
-  }
-]
