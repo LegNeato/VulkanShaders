@@ -11,6 +11,10 @@ members = [
     "pipelines/toon",
     "pipelines/wireframe",
     "specializationconstants/uber",
+    "computeshader/edgedetect",
+    "computeshader/emboss",
+    "computeshader/sharpen",
+    "computeshader/texture",
     "base/uioverlay",
     "base/textoverlay",
 ]
