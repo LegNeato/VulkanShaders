@@ -5,6 +5,7 @@ members = [
     "pushconstants",
     "descriptorsets/cube",
     "dynamicuniformbuffer/base",
+    "multisampling/mesh",
     "base/uioverlay",
     "base/textoverlay",
 ]
