@@ -67,12 +67,12 @@ def compile_shader(shader_dir):
                 source_path.rename(final_path)
                 print(f"  Created {final_path.name} (entry point: {entry_point})")
                 
-                # Special case: if this is in base/*, also copy to base directory
-                if shader_dir.parent.name == "base":
-                    base_dir = shader_dir.parent
-                    base_final_path = base_dir / f"{shader_name}.{shader_type}.spv"
-                    shutil.copy2(final_path, base_final_path)
-                    print(f"  Also copied to {base_dir.name}/{shader_name}.{shader_type}.spv")
+                # Special case: if this is in base/* or descriptorsets/*, also copy to parent directory
+                if shader_dir.parent.name in ["base", "descriptorsets"]:
+                    parent_dir = shader_dir.parent
+                    parent_final_path = parent_dir / f"{shader_name}.{shader_type}.spv"
+                    shutil.copy2(final_path, parent_final_path)
+                    print(f"  Also copied to {parent_dir.name}/{shader_name}.{shader_type}.spv")
         else:
             # Fallback for when no manifest exists
             shader_name = shader_dir.name

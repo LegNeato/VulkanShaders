@@ -3,7 +3,9 @@ resolver = "2"
 members = [
     "triangle",
     "pushconstants",
+    "descriptorsets/cube",
     "base/uioverlay",
+    "base/textoverlay",
 ]
 
 [workspace.dependencies]

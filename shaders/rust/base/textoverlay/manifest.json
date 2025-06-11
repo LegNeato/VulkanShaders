@@ -1,0 +1,12 @@
+[
+  {
+    "source_path": "main_fs.spv",
+    "entry_point": "main_fs",
+    "wgsl_entry_point": "main_fs"
+  },
+  {
+    "source_path": "main_vs.spv",
+    "entry_point": "main_vs",
+    "wgsl_entry_point": "main_vs"
+  }
+]

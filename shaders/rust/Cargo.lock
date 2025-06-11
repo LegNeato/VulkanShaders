@@ -35,6 +35,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "cube"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "glam"
 version = "0.30.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -123,6 +131,14 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
+]
+
+[[package]]
+name = "textoverlay"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
 ]
 
 [[package]]
