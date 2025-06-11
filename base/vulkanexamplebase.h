@@ -96,6 +96,25 @@ private:
 protected:
 	// Returns the path to the root of the glsl, hlsl or slang shader directory.
 	std::string getShadersPath() const;
+	
+	// Returns the current shader directory name (glsl, hlsl, slang, or rust)
+	const std::string& getShaderDir() const { return shaderDir; }
+	
+	// Returns the appropriate entry point name for the given shader stage
+	const char* getShaderEntryPoint(VkShaderStageFlagBits stage) const {
+		if (shaderDir == "rust") {
+			switch (stage) {
+				case VK_SHADER_STAGE_VERTEX_BIT: return "main_vs";
+				case VK_SHADER_STAGE_FRAGMENT_BIT: return "main_fs";
+				case VK_SHADER_STAGE_COMPUTE_BIT: return "main_cs";
+				case VK_SHADER_STAGE_GEOMETRY_BIT: return "main_gs";
+				case VK_SHADER_STAGE_TESSELLATION_CONTROL_BIT: return "main_tcs";
+				case VK_SHADER_STAGE_TESSELLATION_EVALUATION_BIT: return "main_tes";
+				default: return "main";
+			}
+		}
+		return "main";
+	}
 
 	// Frame counter to display fps
 	uint32_t frameCounter = 0;

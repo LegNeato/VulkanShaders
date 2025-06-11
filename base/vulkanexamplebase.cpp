@@ -848,8 +848,8 @@ VulkanExampleBase::VulkanExampleBase()
 	}
 	if (commandLineParser.isSet("shaders")) {
 		std::string value = commandLineParser.getValueAsString("shaders", "glsl");
-		if ((value != "glsl") && (value != "hlsl") && (value != "slang")) {
-			std::cerr << "Shader type must be one of 'glsl', 'hlsl' or 'slang'\n";
+		if ((value != "glsl") && (value != "hlsl") && (value != "slang") && (value != "rust")) {
+			std::cerr << "Shader type must be one of 'glsl', 'hlsl', 'slang' or 'rust'\n";
 		}
 		else {
 			shaderDir = value;
