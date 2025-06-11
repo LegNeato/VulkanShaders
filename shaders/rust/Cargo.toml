@@ -26,6 +26,11 @@ members = [
     "parallaxmapping/parallax",
     "computecloth/cloth",
     "computecloth/sphere",
+    "ssao/ssao",
+    "ssao/fullscreen",
+    "ssao/gbuffer",
+    "ssao/blur",
+    "ssao/composition",
 ]
 
 [workspace.dependencies]
