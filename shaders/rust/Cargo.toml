@@ -17,7 +17,12 @@ members = [
     "computeshader/texture",
     "texturearray/instancing",
     "base/uioverlay",
-    "base/textoverlay", "gears", "screenshot/mesh", "negativeviewportheight/quad",
+    "base/textoverlay",
+    "gears",
+    "screenshot/mesh",
+    "negativeviewportheight/quad",
+    "stencilbuffer/outline",
+    "stencilbuffer/toon",
 ]
 
 [workspace.dependencies]

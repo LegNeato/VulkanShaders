@@ -211,6 +211,22 @@ version = "0.9.0"
 source = "git+https://github.com/Rust-GPU/rust-gpu.git?branch=main#77070b70b4af3afd7d12d980f6c997e9b77e6f9c"
 
 [[package]]
+name = "stencilbuffer-outline"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "stencilbuffer-toon"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "syn"
 version = "2.0.102"
 source = "registry+https://github.com/rust-lang/crates.io-index"
