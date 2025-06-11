@@ -1,0 +1,15 @@
+[workspace]
+resolver = "2"
+members = [
+    "triangle",
+    "texture",
+]
+
+[workspace.dependencies]
+spirv-std = { git = "https://github.com/Rust-GPU/rust-gpu.git", branch = "main" }
+bytemuck = { version = "1.14", features = ["derive"] }
+
+[profile.release]
+panic = "abort"
+lto = "fat"
+opt-level = 3
