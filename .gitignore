@@ -249,6 +249,7 @@ shaders/rust/target/
 shaders/rust/*/target/
 shaders/rust/manifest.json
 shaders/rust/*/manifest.json
+shaders/rust/*/*/manifest.json
 
 # Claude configuration
 .claude/
