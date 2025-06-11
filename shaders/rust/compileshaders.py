@@ -67,8 +67,8 @@ def compile_shader(shader_dir):
                 source_path.rename(final_path)
                 print(f"  Created {final_path.name} (entry point: {entry_point})")
                 
-                # Special case: if this is in base/* or descriptorsets/*, also copy to parent directory
-                if shader_dir.parent.name in ["base", "descriptorsets"]:
+                # Special case: copy to parent directory for nested shader structures
+                if shader_dir.parent.name in ["base", "descriptorsets", "dynamicuniformbuffer"]:
                     parent_dir = shader_dir.parent
                     parent_final_path = parent_dir / f"{shader_name}.{shader_type}.spv"
                     shutil.copy2(final_path, parent_final_path)
