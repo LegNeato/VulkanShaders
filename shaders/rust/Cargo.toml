@@ -4,6 +4,7 @@ members = [
     "triangle",
     "pushconstants",
     "descriptorsets/cube",
+    "dynamicuniformbuffer/base",
     "base/uioverlay",
     "base/textoverlay",
 ]
