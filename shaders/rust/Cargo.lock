@@ -190,6 +190,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "uber"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "uioverlay"
 version = "0.1.0"
 dependencies = [
