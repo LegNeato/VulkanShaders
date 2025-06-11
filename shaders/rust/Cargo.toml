@@ -15,6 +15,7 @@ members = [
     "computeshader/emboss",
     "computeshader/sharpen",
     "computeshader/texture",
+    "texturearray/instancing",
     "base/uioverlay",
     "base/textoverlay",
 ]
