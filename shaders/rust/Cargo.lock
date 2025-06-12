@@ -136,6 +136,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "ground"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "hdr-bloom"
 version = "0.1.0"
 dependencies = [
@@ -151,6 +158,13 @@ dependencies = [
 
 [[package]]
 name = "hdr-gbuffer"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "indirectdraw"
 version = "0.1.0"
 dependencies = [
  "spirv-std",
@@ -353,6 +367,13 @@ dependencies = [
 
 [[package]]
 name = "skybox"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "skysphere"
 version = "0.1.0"
 dependencies = [
  "spirv-std",
