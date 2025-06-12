@@ -310,6 +310,30 @@ dependencies = [
 ]
 
 [[package]]
+name = "radialblur"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "radialblur-colorpass"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "radialblur-phongpass"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "scene"
 version = "0.1.0"
 dependencies = [

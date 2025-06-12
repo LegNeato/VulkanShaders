@@ -46,6 +46,9 @@ members = [
     "hdr/gbuffer",
     "hdr/bloom",
     "hdr/composition",
+    "radialblur/radialblur",
+    "radialblur/colorpass",
+    "radialblur/phongpass",
 ]
 
 [workspace.dependencies]
