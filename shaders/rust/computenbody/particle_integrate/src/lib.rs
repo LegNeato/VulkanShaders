@@ -6,14 +6,14 @@ use spirv_std::{
 };
 
 #[repr(C)]
-#[derive(Copy, Clone, bytemuck::Pod, bytemuck::Zeroable)]
+#[derive(Copy, Clone)]
 pub struct Particle {
     pub pos: [f32; 4],  // xyz = position, w = mass
     pub vel: [f32; 4],  // xyz = velocity, w = gradient texture position
 }
 
 #[repr(C)]
-#[derive(Copy, Clone, bytemuck::Pod, bytemuck::Zeroable)]
+#[derive(Copy, Clone)]
 pub struct UBO {
     pub delta_t: f32,
     pub particle_count: u32,
