@@ -34,6 +34,8 @@ members = [
     "shadowmapping/offscreen",
     "shadowmapping/scene",
     "shadowmapping/quad",
+    "deferred/mrt",
+    "deferred/deferred",
 ]
 
 [workspace.dependencies]
