@@ -8,7 +8,6 @@ crate-type = ["dylib"]
 
 [dependencies]
 spirv-std = { workspace = true }
-bytemuck = { workspace = true }
 
 [features]
 default = []

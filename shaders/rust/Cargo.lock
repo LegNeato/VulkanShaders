@@ -12,7 +12,6 @@ checksum = "ace50bade8e6234aa140d9a2f552bbee1db4d353f69b8217bc503490fc1a9f26"
 name = "base"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -26,35 +25,13 @@ checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 name = "blur"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
-]
-
-[[package]]
-name = "bytemuck"
-version = "1.23.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5c76a5792e44e4abe34d3abf15636779261d45a7450612059293d1d2cfc63422"
-dependencies = [
- "bytemuck_derive",
-]
-
-[[package]]
-name = "bytemuck_derive"
-version = "1.9.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7ecc273b49b3205b83d648f0690daa588925572cc5063745bfe547fe7ec8e1a1"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
 ]
 
 [[package]]
 name = "cloth"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -62,7 +39,6 @@ dependencies = [
 name = "colorpass"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -70,7 +46,6 @@ dependencies = [
 name = "composition"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -78,7 +53,6 @@ dependencies = [
 name = "computeshader-texture"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -86,7 +60,6 @@ dependencies = [
 name = "cube"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -94,7 +67,6 @@ dependencies = [
 name = "deferred"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -102,7 +74,6 @@ dependencies = [
 name = "edgedetect"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -110,7 +81,6 @@ dependencies = [
 name = "emboss"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -118,7 +88,6 @@ dependencies = [
 name = "filtercube"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -126,7 +95,6 @@ dependencies = [
 name = "fullscreen"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -134,7 +102,6 @@ dependencies = [
 name = "gaussblur"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -142,7 +109,6 @@ dependencies = [
 name = "gbuffer"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -150,7 +116,6 @@ dependencies = [
 name = "gears"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -158,7 +123,6 @@ dependencies = [
 name = "genbrdflut"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -175,7 +139,6 @@ dependencies = [
 name = "hdr-bloom"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -183,7 +146,6 @@ dependencies = [
 name = "hdr-composition"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -191,7 +153,6 @@ dependencies = [
 name = "hdr-gbuffer"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -199,7 +160,6 @@ dependencies = [
 name = "instancing"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -207,7 +167,6 @@ dependencies = [
 name = "irradiancecube"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -221,7 +180,6 @@ checksum = "8355be11b20d696c8f18f6cc018c4e372165b1fa8126cef092399c9951984ffa"
 name = "mesh"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -229,7 +187,6 @@ dependencies = [
 name = "mrt"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -247,7 +204,6 @@ dependencies = [
 name = "offscreen"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -255,7 +211,6 @@ dependencies = [
 name = "parallax"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -263,7 +218,6 @@ dependencies = [
 name = "particle"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -271,7 +225,6 @@ dependencies = [
 name = "particle_calculate"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -279,7 +232,6 @@ dependencies = [
 name = "particle_integrate"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -287,7 +239,6 @@ dependencies = [
 name = "pbribl"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -295,7 +246,6 @@ dependencies = [
 name = "pbribl-skybox"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -303,7 +253,6 @@ dependencies = [
 name = "phong"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -311,7 +260,6 @@ dependencies = [
 name = "phongpass"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -319,7 +267,6 @@ dependencies = [
 name = "prefilterenvmap"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -336,7 +283,6 @@ dependencies = [
 name = "pushconstants"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -344,7 +290,6 @@ dependencies = [
 name = "quad"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -361,7 +306,6 @@ dependencies = [
 name = "radialblur"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -369,7 +313,6 @@ dependencies = [
 name = "radialblur-colorpass"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -377,7 +320,6 @@ dependencies = [
 name = "radialblur-phongpass"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -385,7 +327,6 @@ dependencies = [
 name = "scene"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -393,7 +334,6 @@ dependencies = [
 name = "screenshot-mesh"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -401,7 +341,6 @@ dependencies = [
 name = "shadowmapping-quad"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -409,7 +348,6 @@ dependencies = [
 name = "sharpen"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -417,7 +355,6 @@ dependencies = [
 name = "skybox"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -425,7 +362,6 @@ dependencies = [
 name = "sphere"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -462,7 +398,6 @@ source = "git+https://github.com/LegNeato/rust-gpu.git?branch=issue190#9075508b0
 name = "ssao"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -470,7 +405,6 @@ dependencies = [
 name = "stencilbuffer-outline"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -478,7 +412,6 @@ dependencies = [
 name = "stencilbuffer-toon"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -497,7 +430,6 @@ dependencies = [
 name = "textoverlay"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -505,7 +437,6 @@ dependencies = [
 name = "texture"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -513,7 +444,6 @@ dependencies = [
 name = "toon"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -521,7 +451,6 @@ dependencies = [
 name = "triangle"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -529,7 +458,6 @@ dependencies = [
 name = "uber"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -537,7 +465,6 @@ dependencies = [
 name = "uioverlay"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]
 
@@ -551,6 +478,5 @@ checksum = "5a5f39404a5da50712a4c1eecf25e90dd62b613502b7e925fd4e4d19b5c96512"
 name = "wireframe"
 version = "0.1.0"
 dependencies = [
- "bytemuck",
  "spirv-std",
 ]

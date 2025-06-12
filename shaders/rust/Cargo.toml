@@ -59,7 +59,6 @@ members = [
 
 [workspace.dependencies]
 spirv-std = { git = "https://github.com/LegNeato/rust-gpu.git", branch = "issue190" }
-bytemuck = { version = "1.14", features = ["derive"] }
 
 [profile.release]
 panic = "abort"

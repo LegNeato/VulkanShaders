@@ -9,7 +9,6 @@ crate-type = ["dylib"]
 
 [dependencies]
 spirv-std = { workspace = true }
-bytemuck = { workspace = true }
 
 [package.metadata.rust-gpu.build]
 capabilities = ["ImageQuery"]
