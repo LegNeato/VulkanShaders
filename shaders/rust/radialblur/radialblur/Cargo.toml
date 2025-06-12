@@ -1,0 +1,17 @@
+[package]
+name = "radialblur"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+spirv-std = { workspace = true }
+bytemuck = { workspace = true }
+
+[lib]
+crate-type = ["dylib"]
+
+[features]
+default = []
+
+[package.metadata.rust-gpu.build]
+capabilities = ["ImageQuery"]
