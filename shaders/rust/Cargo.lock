@@ -115,6 +115,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "filtercube"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "fullscreen"
 version = "0.1.0"
 dependencies = [
@@ -140,6 +148,14 @@ dependencies = [
 
 [[package]]
 name = "gears"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "genbrdflut"
 version = "0.1.0"
 dependencies = [
  "bytemuck",
@@ -181,6 +197,14 @@ dependencies = [
 
 [[package]]
 name = "instancing"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "irradiancecube"
 version = "0.1.0"
 dependencies = [
  "bytemuck",
@@ -260,6 +284,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "pbribl"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "pbribl-skybox"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "phong"
 version = "0.1.0"
 dependencies = [
@@ -269,6 +309,14 @@ dependencies = [
 
 [[package]]
 name = "phongpass"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "prefilterenvmap"
 version = "0.1.0"
 dependencies = [
  "bytemuck",
@@ -384,7 +432,7 @@ dependencies = [
 [[package]]
 name = "spirv-std"
 version = "0.9.0"
-source = "git+https://github.com/LegNeato/rust-gpu.git?branch=issue190#8718ff522b11bc901fa190a54b19ba5a1f0a1e0f"
+source = "git+https://github.com/LegNeato/rust-gpu.git?branch=issue190#9075508b08efa63ef748ce5dfe92ecc8e1a3c0a6"
 dependencies = [
  "bitflags",
  "glam",
@@ -397,7 +445,7 @@ dependencies = [
 [[package]]
 name = "spirv-std-macros"
 version = "0.9.0"
-source = "git+https://github.com/LegNeato/rust-gpu.git?branch=issue190#8718ff522b11bc901fa190a54b19ba5a1f0a1e0f"
+source = "git+https://github.com/LegNeato/rust-gpu.git?branch=issue190#9075508b08efa63ef748ce5dfe92ecc8e1a3c0a6"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -408,7 +456,7 @@ dependencies = [
 [[package]]
 name = "spirv-std-types"
 version = "0.9.0"
-source = "git+https://github.com/LegNeato/rust-gpu.git?branch=issue190#8718ff522b11bc901fa190a54b19ba5a1f0a1e0f"
+source = "git+https://github.com/LegNeato/rust-gpu.git?branch=issue190#9075508b08efa63ef748ce5dfe92ecc8e1a3c0a6"
 
 [[package]]
 name = "ssao"

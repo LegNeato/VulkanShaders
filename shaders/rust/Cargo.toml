@@ -49,6 +49,12 @@ members = [
     "radialblur/radialblur",
     "radialblur/colorpass",
     "radialblur/phongpass",
+    "pbribl/pbribl",
+    "pbribl/genbrdflut",
+    "pbribl/irradiancecube",
+    "pbribl/prefilterenvmap",
+    "pbribl/skybox",
+    "pbribl/filtercube",
 ]
 
 [workspace.dependencies]
