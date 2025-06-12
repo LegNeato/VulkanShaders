@@ -59,6 +59,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "colorpass"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "composition"
 version = "0.1.0"
 dependencies = [
@@ -108,6 +116,14 @@ dependencies = [
 
 [[package]]
 name = "fullscreen"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "gaussblur"
 version = "0.1.0"
 dependencies = [
  "bytemuck",
@@ -228,6 +244,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "phongpass"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "proc-macro2"
 version = "1.0.95"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -294,6 +318,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "skybox"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "sphere"
 version = "0.1.0"
 dependencies = [
@@ -304,7 +336,7 @@ dependencies = [
 [[package]]
 name = "spirv-std"
 version = "0.9.0"
-source = "git+https://github.com/Rust-GPU/rust-gpu.git?branch=main#77070b70b4af3afd7d12d980f6c997e9b77e6f9c"
+source = "git+https://github.com/LegNeato/rust-gpu.git?branch=issue190#8718ff522b11bc901fa190a54b19ba5a1f0a1e0f"
 dependencies = [
  "bitflags",
  "glam",
@@ -317,7 +349,7 @@ dependencies = [
 [[package]]
 name = "spirv-std-macros"
 version = "0.9.0"
-source = "git+https://github.com/Rust-GPU/rust-gpu.git?branch=main#77070b70b4af3afd7d12d980f6c997e9b77e6f9c"
+source = "git+https://github.com/LegNeato/rust-gpu.git?branch=issue190#8718ff522b11bc901fa190a54b19ba5a1f0a1e0f"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -328,7 +360,7 @@ dependencies = [
 [[package]]
 name = "spirv-std-types"
 version = "0.9.0"
-source = "git+https://github.com/Rust-GPU/rust-gpu.git?branch=main#77070b70b4af3afd7d12d980f6c997e9b77e6f9c"
+source = "git+https://github.com/LegNeato/rust-gpu.git?branch=issue190#8718ff522b11bc901fa190a54b19ba5a1f0a1e0f"
 
 [[package]]
 name = "ssao"
