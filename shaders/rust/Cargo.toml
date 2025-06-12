@@ -43,6 +43,9 @@ members = [
     "bloom/colorpass",
     "bloom/gaussblur",
     "bloom/skybox",
+    "hdr/gbuffer",
+    "hdr/bloom",
+    "hdr/composition",
 ]
 
 [workspace.dependencies]

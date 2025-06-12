@@ -156,6 +156,30 @@ dependencies = [
 ]
 
 [[package]]
+name = "hdr-bloom"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "hdr-composition"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "hdr-gbuffer"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "instancing"
 version = "0.1.0"
 dependencies = [
