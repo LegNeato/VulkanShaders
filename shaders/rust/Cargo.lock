@@ -83,6 +83,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "deferred"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "edgedetect"
 version = "0.1.0"
 dependencies = [
@@ -147,6 +155,14 @@ checksum = "8355be11b20d696c8f18f6cc018c4e372165b1fa8126cef092399c9951984ffa"
 
 [[package]]
 name = "mesh"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "mrt"
 version = "0.1.0"
 dependencies = [
  "bytemuck",
