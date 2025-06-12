@@ -483,6 +483,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "texture3d"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "toon"
 version = "0.1.0"
 dependencies = [
