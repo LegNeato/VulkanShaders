@@ -55,6 +55,9 @@ members = [
     "pbribl/prefilterenvmap",
     "pbribl/skybox",
     "pbribl/filtercube",
+    "indirectdraw/indirectdraw",
+    "indirectdraw/ground",
+    "indirectdraw/skysphere",
 ]
 
 [workspace.dependencies]

@@ -68,7 +68,7 @@ def compile_shader(shader_dir):
                 print(f"  Created {final_path.name} (entry point: {entry_point})")
                 
                 # Special case: move to parent directory for nested shader structures
-                if shader_dir.parent.name in ["base", "descriptorsets", "dynamicuniformbuffer", "multisampling", "pipelines", "specializationconstants", "computeshader", "texturearray", "screenshot", "negativeviewportheight", "stencilbuffer", "parallaxmapping", "computecloth", "ssao", "shadowmapping", "deferred", "computenbody", "bloom", "hdr", "radialblur", "pbribl"]:
+                if shader_dir.parent.name in ["base", "descriptorsets", "dynamicuniformbuffer", "multisampling", "pipelines", "specializationconstants", "computeshader", "texturearray", "screenshot", "negativeviewportheight", "stencilbuffer", "parallaxmapping", "computecloth", "ssao", "shadowmapping", "deferred", "computenbody", "bloom", "hdr", "radialblur", "pbribl", "indirectdraw"]:
                     parent_dir = shader_dir.parent
                     parent_final_path = parent_dir / f"{shader_name}.{shader_type}.spv"
                     shutil.move(str(final_path), str(parent_final_path))
@@ -124,12 +124,6 @@ def main():
         sys.exit(1)
     
     print(f"Found {len(shader_dirs)} shader crates to build")
-    
-    # Clean old .spv files
-    print("\nCleaning old files...")
-    for spv_file in rust_gpu_dir.rglob("*.spv"):
-        if "target" not in str(spv_file):
-            spv_file.unlink()
     
     # Compile each shader crate
     total_success = 0
