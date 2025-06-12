@@ -39,10 +39,14 @@ members = [
     "computenbody/particle_calculate",
     "computenbody/particle_integrate",
     "computenbody/particle",
+    "bloom/phongpass",
+    "bloom/colorpass",
+    "bloom/gaussblur",
+    "bloom/skybox",
 ]
 
 [workspace.dependencies]
-spirv-std = { git = "https://github.com/Rust-GPU/rust-gpu.git", branch = "main" }
+spirv-std = { git = "https://github.com/LegNeato/rust-gpu.git", branch = "issue190" }
 bytemuck = { version = "1.14", features = ["derive"] }
 
 [profile.release]
