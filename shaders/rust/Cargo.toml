@@ -61,6 +61,7 @@ members = [
     "instancing/instancing",
     "instancing/planet",
     "instancing/starfield",
+    "texture3d",
 ]
 
 [workspace.dependencies]
