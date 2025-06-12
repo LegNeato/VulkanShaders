@@ -36,6 +36,9 @@ members = [
     "shadowmapping/quad",
     "deferred/mrt",
     "deferred/deferred",
+    "computenbody/particle_calculate",
+    "computenbody/particle_integrate",
+    "computenbody/particle",
 ]
 
 [workspace.dependencies]

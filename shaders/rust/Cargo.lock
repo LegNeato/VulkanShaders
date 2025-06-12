@@ -196,6 +196,30 @@ dependencies = [
 ]
 
 [[package]]
+name = "particle"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "particle_calculate"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
+name = "particle_integrate"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "spirv-std",
+]
+
+[[package]]
 name = "phong"
 version = "0.1.0"
 dependencies = [
