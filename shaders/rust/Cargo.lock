@@ -178,6 +178,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "instancing-instancing"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "irradiancecube"
 version = "0.1.0"
 dependencies = [
@@ -272,6 +279,13 @@ dependencies = [
 
 [[package]]
 name = "phongpass"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "planet"
 version = "0.1.0"
 dependencies = [
  "spirv-std",
@@ -417,6 +431,13 @@ source = "git+https://github.com/rust-gpu/rust-gpu.git?branch=main#30024f86419f0
 
 [[package]]
 name = "ssao"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "starfield"
 version = "0.1.0"
 dependencies = [
  "spirv-std",

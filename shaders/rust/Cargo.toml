@@ -58,6 +58,9 @@ members = [
     "indirectdraw/indirectdraw",
     "indirectdraw/ground",
     "indirectdraw/skysphere",
+    "instancing/instancing",
+    "instancing/planet",
+    "instancing/starfield",
 ]
 
 [workspace.dependencies]
