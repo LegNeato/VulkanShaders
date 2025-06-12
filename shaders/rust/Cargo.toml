@@ -58,7 +58,7 @@ members = [
 ]
 
 [workspace.dependencies]
-spirv-std = { git = "https://github.com/LegNeato/rust-gpu.git", branch = "issue190" }
+spirv-std = { git = "https://github.com/rust-gpu/rust-gpu.git", branch = "main" }
 
 [profile.release]
 panic = "abort"

@@ -128,9 +128,9 @@ dependencies = [
 
 [[package]]
 name = "glam"
-version = "0.30.3"
+version = "0.30.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6b46b9ca4690308844c644e7c634d68792467260e051c8543e0c7871662b3ba7"
+checksum = "50a99dbe56b72736564cfa4b85bf9a33079f16ae8b74983ab06af3b1a3696b11"
 dependencies = [
  "libm",
 ]
@@ -368,7 +368,7 @@ dependencies = [
 [[package]]
 name = "spirv-std"
 version = "0.9.0"
-source = "git+https://github.com/LegNeato/rust-gpu.git?branch=issue190#9075508b08efa63ef748ce5dfe92ecc8e1a3c0a6"
+source = "git+https://github.com/rust-gpu/rust-gpu.git?branch=main#30024f86419f06436c25e835cb4794e1f41fbcb9"
 dependencies = [
  "bitflags",
  "glam",
@@ -381,7 +381,7 @@ dependencies = [
 [[package]]
 name = "spirv-std-macros"
 version = "0.9.0"
-source = "git+https://github.com/LegNeato/rust-gpu.git?branch=issue190#9075508b08efa63ef748ce5dfe92ecc8e1a3c0a6"
+source = "git+https://github.com/rust-gpu/rust-gpu.git?branch=main#30024f86419f06436c25e835cb4794e1f41fbcb9"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -392,7 +392,7 @@ dependencies = [
 [[package]]
 name = "spirv-std-types"
 version = "0.9.0"
-source = "git+https://github.com/LegNeato/rust-gpu.git?branch=issue190#9075508b08efa63ef748ce5dfe92ecc8e1a3c0a6"
+source = "git+https://github.com/rust-gpu/rust-gpu.git?branch=main#30024f86419f06436c25e835cb4794e1f41fbcb9"
 
 [[package]]
 name = "ssao"
