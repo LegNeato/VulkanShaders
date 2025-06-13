@@ -62,6 +62,8 @@ members = [
     "instancing/planet",
     "instancing/starfield",
     "texture3d",
+    "texturecubemap/reflect",
+    "texturecubemap/skybox",
 ]
 
 [workspace.dependencies]

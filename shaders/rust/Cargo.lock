@@ -352,6 +352,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "reflect"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "scene"
 version = "0.1.0"
 dependencies = [
@@ -484,6 +491,13 @@ dependencies = [
 
 [[package]]
 name = "texture3d"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "texturecubemap-skybox"
 version = "0.1.0"
 dependencies = [
  "spirv-std",
