@@ -1,0 +1,13 @@
+[package]
+name = "debugprintf-toon"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+spirv-std = { workspace = true }
+
+[lib]
+crate-type = ["dylib"]
+
+[package.metadata.rust-gpu.build]
+extensions = ["SPV_KHR_non_semantic_info"]
