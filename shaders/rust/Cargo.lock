@@ -222,6 +222,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "occluder"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "occlusionquery-mesh"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "offscreen"
 version = "0.1.0"
 dependencies = [
@@ -395,6 +409,13 @@ dependencies = [
 
 [[package]]
 name = "sharpen"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "simple"
 version = "0.1.0"
 dependencies = [
  "spirv-std",
