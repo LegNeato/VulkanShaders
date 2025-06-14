@@ -99,6 +99,17 @@ public:
 
 	std::string shaderDir = "glsl";
 
+	const char* getShaderEntryPoint(VkShaderStageFlagBits stage) const {
+		if (shaderDir == "rust") {
+			switch (stage) {
+				case VK_SHADER_STAGE_VERTEX_BIT: return "main_vs";
+				case VK_SHADER_STAGE_FRAGMENT_BIT: return "main_fs";
+				default: return "main";
+			}
+		}
+		return "main";
+	}
+
 	uint32_t getMemoryTypeIndex(uint32_t typeBits, VkMemoryPropertyFlags properties) {
 		VkPhysicalDeviceMemoryProperties deviceMemoryProperties;
 		vkGetPhysicalDeviceMemoryProperties(physicalDevice, &deviceMemoryProperties);
@@ -667,10 +678,10 @@ public:
 
 			shaderStages[0].sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
 			shaderStages[0].stage = VK_SHADER_STAGE_VERTEX_BIT;
-			shaderStages[0].pName = "main";
+			shaderStages[0].pName = getShaderEntryPoint(VK_SHADER_STAGE_VERTEX_BIT);
 			shaderStages[1].sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
 			shaderStages[1].stage = VK_SHADER_STAGE_FRAGMENT_BIT;
-			shaderStages[1].pName = "main";
+			shaderStages[1].pName = getShaderEntryPoint(VK_SHADER_STAGE_FRAGMENT_BIT);
 #if defined(VK_USE_PLATFORM_ANDROID_KHR)
 			shaderStages[0].module = vks::tools::loadShader(androidapp->activity->assetManager, (shadersPath + "triangle.vert.spv").c_str(), device);
 			shaderStages[1].module = vks::tools::loadShader(androidapp->activity->assetManager, (shadersPath + "triangle.frag.spv").c_str(), device);
