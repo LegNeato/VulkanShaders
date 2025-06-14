@@ -91,6 +91,8 @@ def compile_shader(shader_dir):
                 if old_path.exists():
                     old_path.rename(new_path)
                     print(f"  Created {new_name}")
+    else:
+        print(f"  ERROR: Failed to compile {shader_dir.name} (exit code: {result.returncode})")
     
     return result.returncode == 0
 
@@ -129,6 +131,7 @@ def main():
     # Compile each shader crate
     total_success = 0
     total_failed = 0
+    failed_shaders = []
     
     for shader_dir in sorted(shader_dirs):
         if compile_shader(shader_dir):
@@ -136,12 +139,13 @@ def main():
             spv_files = list(shader_dir.glob("*.spv"))
             total_success += len(spv_files)
         else:
-            print(f"  Failed to build {shader_dir.name}")
             total_failed += 1
+            failed_shaders.append(shader_dir.name)
     
     print(f"\nCompilation complete: {total_success} shaders generated, {total_failed} crates failed")
     
     if total_failed > 0:
+        print(f"\nFailed shaders: {', '.join(failed_shaders)}")
         sys.exit(1)
 
 if __name__ == "__main__":
