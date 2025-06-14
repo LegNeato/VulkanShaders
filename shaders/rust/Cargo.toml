@@ -70,6 +70,7 @@ members = [
     "occlusionquery/mesh",
     "occlusionquery/occluder",
     "computeheadless/headless",
+    "debugprintf/toon",
 ]
 
 [workspace.dependencies]
