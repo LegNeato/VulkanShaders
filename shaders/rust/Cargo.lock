@@ -71,6 +71,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "conditionalrender-model"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "cube"
 version = "0.1.0"
 dependencies = [

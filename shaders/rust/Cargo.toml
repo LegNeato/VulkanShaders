@@ -77,6 +77,7 @@ members = [
     "computeparticles/particle",
     "distancefieldfonts/bitmap",
     "distancefieldfonts/sdf",
+    "conditionalrender/model",
 ]
 
 [workspace.dependencies]
