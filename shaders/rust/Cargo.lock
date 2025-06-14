@@ -359,6 +359,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "renderheadless-triangle"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "scene"
 version = "0.1.0"
 dependencies = [
@@ -367,6 +374,13 @@ dependencies = [
 
 [[package]]
 name = "screenshot-mesh"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "sem"
 version = "0.1.0"
 dependencies = [
  "spirv-std",
