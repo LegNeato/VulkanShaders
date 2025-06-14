@@ -66,6 +66,9 @@ members = [
     "texturecubemap/skybox",
     "renderheadless/triangle",
     "sphericalenvmapping/sem",
+    "occlusionquery/simple",
+    "occlusionquery/mesh",
+    "occlusionquery/occluder",
 ]
 
 [workspace.dependencies]
