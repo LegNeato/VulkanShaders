@@ -75,6 +75,8 @@ members = [
     "descriptorbuffer/cube",
     "dynamicrendering/texture",
     "computeparticles/particle",
+    "distancefieldfonts/bitmap",
+    "distancefieldfonts/sdf",
 ]
 
 [workspace.dependencies]
