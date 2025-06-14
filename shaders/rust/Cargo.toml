@@ -71,6 +71,7 @@ members = [
     "occlusionquery/occluder",
     "computeheadless/headless",
     "debugprintf/toon",
+    "pushdescriptors/cube",
 ]
 
 [workspace.dependencies]
