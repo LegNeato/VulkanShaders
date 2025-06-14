@@ -69,6 +69,7 @@ members = [
     "occlusionquery/simple",
     "occlusionquery/mesh",
     "occlusionquery/occluder",
+    "computeheadless/headless",
 ]
 
 [workspace.dependencies]
