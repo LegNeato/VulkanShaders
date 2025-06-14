@@ -64,6 +64,7 @@ members = [
     "texture3d",
     "texturecubemap/reflect",
     "texturecubemap/skybox",
+    "renderheadless/triangle",
 ]
 
 [workspace.dependencies]
