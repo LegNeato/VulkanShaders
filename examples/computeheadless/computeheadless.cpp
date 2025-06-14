@@ -437,7 +437,7 @@ public:
 #else
 			shaderStage.module = vks::tools::loadShader((shadersPath + "headless.comp.spv").c_str(), device);
 #endif
-			shaderStage.pName = "main";
+			shaderStage.pName = (shaderDir == "rust") ? "main_cs" : "main";
 			shaderStage.pSpecializationInfo = &specializationInfo;
 			shaderModule = shaderStage.module;
 
