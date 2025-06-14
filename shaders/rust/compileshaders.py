@@ -67,9 +67,10 @@ def compile_shader(shader_dir):
                 source_path.rename(final_path)
                 print(f"  Created {final_path.name} (entry point: {entry_point})")
                 
-                # Special case: move to parent directory for nested shader structures
-                if shader_dir.parent.name in ["base", "descriptorsets", "dynamicuniformbuffer", "multisampling", "pipelines", "specializationconstants", "computeshader", "texturearray", "screenshot", "negativeviewportheight", "stencilbuffer", "parallaxmapping", "computecloth", "ssao", "shadowmapping", "deferred", "computenbody", "bloom", "hdr", "radialblur", "pbribl", "indirectdraw", "instancing", "texturecubemap", "renderheadless", "sphericalenvmapping", "occlusionquery"]:
-                    parent_dir = shader_dir.parent
+                # Move to parent directory unless there's a top-level Cargo.toml
+                # (top-level shaders like triangle, texture, etc. have their own Cargo.toml)
+                parent_dir = shader_dir.parent
+                if not (parent_dir / "Cargo.toml").exists():
                     parent_final_path = parent_dir / f"{shader_name}.{shader_type}.spv"
                     shutil.move(str(final_path), str(parent_final_path))
                     print(f"  Moved to {parent_dir.name}/{shader_name}.{shader_type}.spv")
