@@ -50,6 +50,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "computeheadless-headless"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "computeshader-texture"
 version = "0.1.0"
 dependencies = [
@@ -58,6 +65,13 @@ dependencies = [
 
 [[package]]
 name = "cube"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "debugprintf-toon"
 version = "0.1.0"
 dependencies = [
  "spirv-std",
@@ -323,6 +337,13 @@ dependencies = [
 
 [[package]]
 name = "pushconstants"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "pushdescriptors-cube"
 version = "0.1.0"
 dependencies = [
  "spirv-std",
