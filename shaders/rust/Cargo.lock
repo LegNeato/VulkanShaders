@@ -92,6 +92,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "dynamicrendering-texture"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "edgedetect"
 version = "0.1.0"
 dependencies = [

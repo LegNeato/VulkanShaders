@@ -73,6 +73,7 @@ members = [
     "debugprintf/toon",
     "pushdescriptors/cube",
     "descriptorbuffer/cube",
+    "dynamicrendering/texture",
 ]
 
 [workspace.dependencies]
