@@ -65,6 +65,7 @@ members = [
     "texturecubemap/reflect",
     "texturecubemap/skybox",
     "renderheadless/triangle",
+    "sphericalenvmapping/sem",
 ]
 
 [workspace.dependencies]
