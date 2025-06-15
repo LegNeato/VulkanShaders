@@ -92,6 +92,7 @@ members = [
     "multiview/viewdisplay",
     "imgui/ui",
     "imgui/scene",
+    "texturemipmapgen/texture",
 ]
 
 [workspace.dependencies]
