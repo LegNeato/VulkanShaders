@@ -65,6 +65,8 @@ members = [
     "offscreen/phong",
     "offscreen/quad",
     "parallaxmapping/parallax",
+    "particlesystem/particle",
+    "particlesystem/normalmap",
     "pbrbasic/pbr",
     "pbribl/filtercube",
     "pbribl/genbrdflut",
