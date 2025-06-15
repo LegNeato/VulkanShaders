@@ -748,6 +748,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "vulkanscene-logo"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "vulkanscene-mesh"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "vulkanscene-skybox"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "wireframe"
 version = "0.1.0"
 dependencies = [
