@@ -93,6 +93,7 @@ members = [
     "imgui/ui",
     "imgui/scene",
     "texturemipmapgen/texture",
+    "pbrbasic/pbr",
 ]
 
 [workspace.dependencies]

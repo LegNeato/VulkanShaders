@@ -397,6 +397,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "pbrbasic-pbr"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "pbribl"
 version = "0.1.0"
 dependencies = [
