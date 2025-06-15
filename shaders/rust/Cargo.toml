@@ -91,6 +91,8 @@ members = [
     "texturearray/instancing",
     "texturecubemap/reflect",
     "texturecubemap/skybox",
+    "texturecubemaparray/reflect",
+    "texturecubemaparray/skybox",
     "texturemipmapgen/texture",
     "triangle",
     "vertexattributes/scene",
