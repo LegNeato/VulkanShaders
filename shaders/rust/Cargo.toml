@@ -99,6 +99,9 @@ members = [
     "vulkanscene/mesh",
 ]
 
+[workspace.package]
+edition = "2021"
+
 [workspace.dependencies]
 spirv-std = { git = "https://github.com/rust-gpu/rust-gpu.git", branch = "main" }
 
