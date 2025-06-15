@@ -611,6 +611,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "rayquery-scene"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "reflect"
 version = "0.1.0"
 dependencies = [
