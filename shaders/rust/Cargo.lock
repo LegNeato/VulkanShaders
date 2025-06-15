@@ -234,6 +234,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "gltfskinning-skinnedmodel"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "ground"
 version = "0.1.0"
 dependencies = [

@@ -35,6 +35,7 @@ members = [
     "gears",
     "gltfloading/mesh",
     "gltfscenerendering/scene",
+    "gltfskinning/skinnedmodel",
     "hdr/bloom",
     "hdr/composition",
     "hdr/gbuffer",
