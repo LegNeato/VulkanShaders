@@ -325,6 +325,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "inputattachments-attachmentread"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "inputattachments-attachmentwrite"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "instancing"
 version = "0.1.0"
 dependencies = [

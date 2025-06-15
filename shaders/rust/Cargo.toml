@@ -52,6 +52,8 @@ members = [
     "instancing/instancing",
     "instancing/planet",
     "instancing/starfield",
+    "inputattachments/attachmentwrite",
+    "inputattachments/attachmentread",
     "multisampling/mesh",
     "multithreading/phong",
     "multithreading/starsphere",
