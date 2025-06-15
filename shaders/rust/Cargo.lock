@@ -693,6 +693,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "texturemipmapgen-texture"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "toon"
 version = "0.1.0"
 dependencies = [
