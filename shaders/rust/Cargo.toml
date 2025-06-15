@@ -28,6 +28,8 @@ members = [
     "descriptorbuffer/cube",
     "descriptorindexing",
     "descriptorsets/cube",
+    "displacement/base",
+    "displacement/displacement",
     "distancefieldfonts/bitmap",
     "distancefieldfonts/sdf",
     "dynamicrendering/texture",

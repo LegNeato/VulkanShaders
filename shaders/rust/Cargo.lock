@@ -134,6 +134,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "displacement-base"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "displacement-displacement"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "distancefieldfonts-bitmap"
 version = "0.1.0"
 dependencies = [
