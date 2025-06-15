@@ -352,6 +352,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "multithreading-phong"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "multithreading-starsphere"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "multiview-multiview"
 version = "0.1.0"
 dependencies = [
