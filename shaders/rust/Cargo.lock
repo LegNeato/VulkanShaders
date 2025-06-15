@@ -700,6 +700,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "texturecubemaparray-reflect"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "texturecubemaparray-skybox"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "texturemipmapgen-texture"
 version = "0.1.0"
 dependencies = [
