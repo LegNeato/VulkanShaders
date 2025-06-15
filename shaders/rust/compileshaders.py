@@ -104,6 +104,12 @@ def main():
     # Check requirements
     check_requirements()
     
+    # Parse command line arguments
+    shader_filter = None
+    if len(sys.argv) > 1:
+        shader_filter = sys.argv[1]
+        print(f"Filtering for shader: {shader_filter}")
+    
     # Get workspace members from cargo metadata
     try:
         result = subprocess.run(['cargo', 'metadata', '--format-version', '1'], 
@@ -116,14 +122,23 @@ def main():
             for package in metadata['packages']:
                 if package['id'] == member:
                     package_path = Path(package['manifest_path']).parent
-                    shader_dirs.append(package_path)
+                    # Apply filter if specified
+                    if shader_filter:
+                        # Check if the filter matches the path or package name
+                        if shader_filter in str(package_path) or shader_filter == package['name']:
+                            shader_dirs.append(package_path)
+                    else:
+                        shader_dirs.append(package_path)
                     break
     except (subprocess.CalledProcessError, json.JSONDecodeError, KeyError) as e:
         print(f"Error getting workspace metadata: {e}")
         sys.exit(1)
     
     if not shader_dirs:
-        print("No shader crates found")
+        if shader_filter:
+            print(f"No shader crates found matching '{shader_filter}'")
+        else:
+            print("No shader crates found")
         sys.exit(1)
     
     print(f"Found {len(shader_dirs)} shader crates to build")
