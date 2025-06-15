@@ -84,6 +84,9 @@ members = [
     "offscreen/quad",
     "offscreen/mirror",
     "offscreen/phong",
+    "debugutils/colorpass",
+    "debugutils/postprocess",
+    "debugutils/toon",
 ]
 
 [workspace.dependencies]
