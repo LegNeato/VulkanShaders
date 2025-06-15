@@ -84,6 +84,7 @@ members = [
     "radialblur/colorpass",
     "radialblur/phongpass",
     "radialblur/radialblur",
+    "rayquery/scene",
     "renderheadless/triangle",
     "screenshot/mesh",
     "shaderobjects/phong",
