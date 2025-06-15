@@ -33,6 +33,7 @@ members = [
     "dynamicrendering/texture",
     "dynamicuniformbuffer/base",
     "gears",
+    "gltfloading/mesh",
     "hdr/bloom",
     "hdr/composition",
     "hdr/gbuffer",
