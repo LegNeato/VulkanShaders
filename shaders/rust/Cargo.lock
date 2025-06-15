@@ -474,6 +474,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "particlesystem-normalmap"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "particlesystem-particle"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "pbrbasic-pbr"
 version = "0.1.0"
 dependencies = [
