@@ -1,0 +1,10 @@
+[package]
+name = "shaderobjects-phong"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+spirv-std = { workspace = true }
+
+[lib]
+crate-type = ["dylib"]
