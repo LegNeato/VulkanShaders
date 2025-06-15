@@ -26,6 +26,7 @@ members = [
     "deferred/deferred",
     "deferred/mrt",
     "descriptorbuffer/cube",
+    "descriptorindexing",
     "descriptorsets/cube",
     "distancefieldfonts/bitmap",
     "distancefieldfonts/sdf",
