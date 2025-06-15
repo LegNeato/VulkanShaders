@@ -92,6 +92,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "debugutils-colorpass"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "debugutils-postprocess"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "debugutils-toon"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "deferred"
 version = "0.1.0"
 dependencies = [
