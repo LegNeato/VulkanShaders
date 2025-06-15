@@ -78,6 +78,8 @@ members = [
     "distancefieldfonts/bitmap",
     "distancefieldfonts/sdf",
     "conditionalrender/model",
+    "textoverlay/text",
+    "textoverlay/mesh",
 ]
 
 [workspace.dependencies]
