@@ -299,6 +299,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "offscreen-mirror"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "offscreen-phong"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "offscreen-quad"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "parallax"
 version = "0.1.0"
 dependencies = [

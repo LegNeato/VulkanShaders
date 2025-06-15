@@ -81,6 +81,9 @@ members = [
     "textoverlay/text",
     "textoverlay/mesh",
     "shaderobjects/phong",
+    "offscreen/quad",
+    "offscreen/mirror",
+    "offscreen/phong",
 ]
 
 [workspace.dependencies]
