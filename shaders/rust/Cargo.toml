@@ -94,6 +94,9 @@ members = [
     "imgui/scene",
     "texturemipmapgen/texture",
     "pbrbasic/pbr",
+    "vulkanscene/skybox",
+    "vulkanscene/logo",
+    "vulkanscene/mesh",
 ]
 
 [workspace.dependencies]
