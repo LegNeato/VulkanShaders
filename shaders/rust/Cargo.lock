@@ -127,6 +127,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "descriptorindexing"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "distancefieldfonts-bitmap"
 version = "0.1.0"
 dependencies = [
