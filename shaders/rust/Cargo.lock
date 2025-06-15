@@ -581,6 +581,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "textoverlay-mesh"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "textoverlay-text"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "texture"
 version = "0.1.0"
 dependencies = [
