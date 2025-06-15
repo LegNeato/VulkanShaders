@@ -44,6 +44,7 @@ members = [
     "indirectdraw/ground",
     "indirectdraw/indirectdraw",
     "indirectdraw/skysphere",
+    "inlineuniformblocks/pbr",
     "instancing/instancing",
     "instancing/planet",
     "instancing/starfield",

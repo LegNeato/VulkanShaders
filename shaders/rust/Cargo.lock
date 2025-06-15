@@ -290,6 +290,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "inlineuniformblocks-pbr"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "instancing"
 version = "0.1.0"
 dependencies = [
