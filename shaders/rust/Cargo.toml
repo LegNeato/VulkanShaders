@@ -90,6 +90,8 @@ members = [
     "vertexattributes/scene",
     "multiview/multiview",
     "multiview/viewdisplay",
+    "imgui/ui",
+    "imgui/scene",
 ]
 
 [workspace.dependencies]
