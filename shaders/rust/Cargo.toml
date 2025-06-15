@@ -87,6 +87,7 @@ members = [
     "debugutils/colorpass",
     "debugutils/postprocess",
     "debugutils/toon",
+    "vertexattributes/scene",
 ]
 
 [workspace.dependencies]
