@@ -36,6 +36,8 @@ members = [
     "gltfloading/mesh",
     "gltfscenerendering/scene",
     "gltfskinning/skinnedmodel",
+    "graphicspipelinelibrary/shared",
+    "graphicspipelinelibrary/uber",
     "hdr/bloom",
     "hdr/composition",
     "hdr/gbuffer",
