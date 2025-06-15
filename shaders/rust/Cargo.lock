@@ -464,6 +464,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "shaderobjects-phong"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "shadowmapping-quad"
 version = "0.1.0"
 dependencies = [

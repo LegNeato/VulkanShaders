@@ -80,6 +80,7 @@ members = [
     "conditionalrender/model",
     "textoverlay/text",
     "textoverlay/mesh",
+    "shaderobjects/phong",
 ]
 
 [workspace.dependencies]
