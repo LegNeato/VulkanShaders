@@ -1,0 +1,13 @@
+[package]
+name = "multiview-multiview"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["dylib"]
+
+[dependencies]
+spirv-std = { workspace = true }
+
+[package.metadata.rust-gpu.build]
+capabilities = ["MultiView"]

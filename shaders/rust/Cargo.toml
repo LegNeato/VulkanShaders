@@ -88,6 +88,8 @@ members = [
     "debugutils/postprocess",
     "debugutils/toon",
     "vertexattributes/scene",
+    "multiview/multiview",
+    "multiview/viewdisplay",
 ]
 
 [workspace.dependencies]
