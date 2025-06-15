@@ -34,6 +34,7 @@ members = [
     "dynamicuniformbuffer/base",
     "gears",
     "gltfloading/mesh",
+    "gltfscenerendering/scene",
     "hdr/bloom",
     "hdr/composition",
     "hdr/gbuffer",
