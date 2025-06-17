@@ -50,6 +50,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "computecullandlod-cull"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "computecullandlod-indirectdraw"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "computeheadless-headless"
 version = "0.1.0"
 dependencies = [
