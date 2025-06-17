@@ -27,6 +27,8 @@ members = [
     "debugutils/toon",
     "deferred/deferred",
     "deferred/mrt",
+    "deferredmultisampling/deferred",
+    "deferredmultisampling/mrt",
     "descriptorbuffer/cube",
     "descriptorindexing",
     "descriptorsets/cube",

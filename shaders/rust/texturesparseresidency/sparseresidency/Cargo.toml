@@ -1,0 +1,13 @@
+[package]
+name = "texturesparseresidency-sparseresidency"
+version = "0.1.0"
+edition.workspace = true
+
+[dependencies]
+spirv-std = { workspace = true }
+
+[lib]
+crate-type = ["dylib"]
+
+[package.metadata.rust-gpu.build]
+capabilities = ["SparseResidency", "ImageQuery"]
