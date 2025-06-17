@@ -134,6 +134,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "deferredmultisampling-deferred"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "deferredmultisampling-mrt"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "descriptorbuffer-cube"
 version = "0.1.0"
 dependencies = [

@@ -1,0 +1,10 @@
+[package]
+name = "oit-color"
+version = "0.1.0"
+edition.workspace = true
+
+[dependencies]
+spirv-std = { workspace = true }
+
+[lib]
+crate-type = ["dylib"]
