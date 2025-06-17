@@ -681,6 +681,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "shadowmappingomni-cubemapdisplay"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "shadowmappingomni-offscreen"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "shadowmappingomni-scene"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "sharpen"
 version = "0.1.0"
 dependencies = [
