@@ -57,6 +57,12 @@ def compile_shader(shader_dir):
                     shader_type = "frag"
                 elif entry_point == "main_cs" or "compute" in entry_point.lower():
                     shader_type = "comp"
+                elif entry_point == "main_gs" or "geometry" in entry_point.lower():
+                    shader_type = "geom"
+                elif entry_point == "main_tcs" or "tesscontrol" in entry_point.lower():
+                    shader_type = "tesc"
+                elif entry_point == "main_tes" or "tesseval" in entry_point.lower():
+                    shader_type = "tese"
                 else:
                     # Skip unknown entry points
                     continue
@@ -83,6 +89,9 @@ def compile_shader(shader_dir):
                 ("main_vs.spv", f"{shader_name}.vert.spv"),
                 ("main_fs.spv", f"{shader_name}.frag.spv"),
                 ("main_cs.spv", f"{shader_name}.comp.spv"),
+                ("main_gs.spv", f"{shader_name}.geom.spv"),
+                ("main_tcs.spv", f"{shader_name}.tesc.spv"),
+                ("main_tes.spv", f"{shader_name}.tese.spv"),
             ]
             
             for old_name, new_name in renames:
