@@ -253,6 +253,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "geometryshader-base"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "geometryshader-mesh"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "geometryshader-normaldebug"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "glam"
 version = "0.30.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
