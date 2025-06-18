@@ -128,6 +128,8 @@ members = [
     "texturemipmapgen/texture",
     "triangle",
     "vertexattributes/scene",
+    "viewportarray/scene",
+    "viewportarray/multiview",
     "vulkanscene/logo",
     "vulkanscene/mesh",
     "vulkanscene/skybox",
