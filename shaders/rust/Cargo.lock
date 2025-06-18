@@ -986,6 +986,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "viewportarray-multiview"
+version = "0.1.0"
+dependencies = [
+ "glam",
+ "spirv-std",
+]
+
+[[package]]
+name = "viewportarray-scene"
+version = "0.1.0"
+dependencies = [
+ "glam",
+ "spirv-std",
+]
+
+[[package]]
 name = "vulkanscene-logo"
 version = "0.1.0"
 dependencies = [
