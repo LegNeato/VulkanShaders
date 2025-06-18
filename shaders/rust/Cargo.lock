@@ -148,6 +148,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "deferredshadows-deferred"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "deferredshadows-mrt"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "deferredshadows-shadow"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "descriptorbuffer-cube"
 version = "0.1.0"
 dependencies = [
@@ -989,7 +1010,6 @@ dependencies = [
 name = "viewportarray-multiview"
 version = "0.1.0"
 dependencies = [
- "glam",
  "spirv-std",
 ]
 
@@ -997,7 +1017,6 @@ dependencies = [
 name = "viewportarray-scene"
 version = "0.1.0"
 dependencies = [
- "glam",
  "spirv-std",
 ]
 
