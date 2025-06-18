@@ -840,6 +840,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "tessellation-base"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "tessellation-passthrough"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "tessellation-pntriangles"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "textoverlay"
 version = "0.1.0"
 dependencies = [
