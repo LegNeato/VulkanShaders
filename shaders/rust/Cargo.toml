@@ -136,6 +136,9 @@ members = [
     "vulkanscene/logo",
     "vulkanscene/mesh",
     "vulkanscene/skybox",
+    "shadowmappingcascade/depthpass",
+    "shadowmappingcascade/debugshadowmap",
+    "shadowmappingcascade/scene",
 ]
 
 [workspace.package]
