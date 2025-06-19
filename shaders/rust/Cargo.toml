@@ -139,6 +139,7 @@ members = [
     "shadowmappingcascade/depthpass",
     "shadowmappingcascade/debugshadowmap",
     "shadowmappingcascade/scene",
+    "pipelinestatistics/scene",
 ]
 
 [workspace.package]
