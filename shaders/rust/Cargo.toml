@@ -140,6 +140,7 @@ members = [
     "shadowmappingcascade/debugshadowmap",
     "shadowmappingcascade/scene",
     "pipelinestatistics/scene",
+    "meshshader/meshshader",
 ]
 
 [workspace.package]

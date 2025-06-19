@@ -443,6 +443,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "meshshader"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "mrt"
 version = "0.1.0"
 dependencies = [
