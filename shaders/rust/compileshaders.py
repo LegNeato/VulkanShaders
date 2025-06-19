@@ -63,6 +63,10 @@ def compile_shader(shader_dir):
                     shader_type = "tesc"
                 elif entry_point == "main_tes" or "tesseval" in entry_point.lower():
                     shader_type = "tese"
+                elif entry_point == "main_task" or "task" in entry_point.lower():
+                    shader_type = "task"
+                elif entry_point == "main_mesh" or "mesh" in entry_point.lower():
+                    shader_type = "mesh"
                 else:
                     # Skip unknown entry points
                     continue
@@ -92,6 +96,8 @@ def compile_shader(shader_dir):
                 ("main_gs.spv", f"{shader_name}.geom.spv"),
                 ("main_tcs.spv", f"{shader_name}.tesc.spv"),
                 ("main_tes.spv", f"{shader_name}.tese.spv"),
+                ("main_task.spv", f"{shader_name}.task.spv"),
+                ("main_mesh.spv", f"{shader_name}.mesh.spv"),
             ]
             
             for old_name, new_name in renames:
