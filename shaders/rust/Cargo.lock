@@ -737,6 +737,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "shadowmappingcascade-debugshadowmap"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "shadowmappingcascade-depthpass"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "shadowmappingcascade-scene"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "shadowmappingomni-cubemapdisplay"
 version = "0.1.0"
 dependencies = [
