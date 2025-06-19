@@ -607,6 +607,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "pipelinestatistics-scene"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "planet"
 version = "0.1.0"
 dependencies = [
