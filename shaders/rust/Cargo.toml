@@ -141,6 +141,8 @@ members = [
     "shadowmappingcascade/scene",
     "pipelinestatistics/scene",
     "meshshader/meshshader",
+    "terraintessellation/terrain",
+    "terraintessellation/skysphere",
 ]
 
 [workspace.package]
