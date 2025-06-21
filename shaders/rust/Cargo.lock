@@ -92,6 +92,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "conservativeraster-fullscreen"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "conservativeraster-triangle"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "conservativeraster-triangleoverlay"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "cube"
 version = "0.1.0"
 dependencies = [

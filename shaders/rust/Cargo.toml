@@ -143,6 +143,9 @@ members = [
     "meshshader/meshshader",
     "terraintessellation/terrain",
     "terraintessellation/skysphere",
+    "conservativeraster/triangle",
+    "conservativeraster/triangleoverlay",
+    "conservativeraster/fullscreen",
 ]
 
 [workspace.package]
