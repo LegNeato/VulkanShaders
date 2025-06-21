@@ -917,6 +917,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "terraintessellation-skysphere"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
+name = "terraintessellation-terrain"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "tessellation-base"
 version = "0.1.0"
 dependencies = [
