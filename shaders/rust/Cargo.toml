@@ -146,6 +146,7 @@ members = [
     "conservativeraster/triangle",
     "conservativeraster/triangleoverlay",
     "conservativeraster/fullscreen",
+    "raytracingbasic",
 ]
 
 [workspace.package]

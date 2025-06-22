@@ -723,6 +723,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "raytracingbasic"
+version = "0.1.0"
+dependencies = [
+ "spirv-std",
+]
+
+[[package]]
 name = "reflect"
 version = "0.1.0"
 dependencies = [
