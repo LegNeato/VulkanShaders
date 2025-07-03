@@ -115,6 +115,11 @@ jobs:
             echo "VK_ICD_FILENAMES=$SWIFTSHADER_DEST_DIR\vk_swiftshader_icd.json" >> $GITHUB_ENV
           fi
       
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
       
