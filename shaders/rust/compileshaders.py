@@ -31,6 +31,7 @@ def compile_shader(shader_dir):
         "--shader-crate", str(shader_dir),
         "--output-dir", str(shader_dir),
         "--multimodule",  # Split into separate files per entry point
+        "--auto-install-rust-toolchain",  # Auto-install required toolchain in CI
     ], capture_output=False)
     
     if result.returncode == 0:

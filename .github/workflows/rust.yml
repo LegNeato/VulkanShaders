@@ -9,8 +9,7 @@ on:
       - master
 
 env:
-  # For setup-rust, see https://github.com/moonrepo/setup-rust/issues/22
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  RUST_LOG: debug
 
 jobs:
   test:
@@ -113,16 +112,13 @@ jobs:
             echo "VK_ICD_FILENAMES=$SWIFTSHADER_DEST_DIR\vk_swiftshader_icd.json" >> $GITHUB_ENV
           fi
       
-      - name: Setup Rust
-        uses: moonrepo/setup-rust@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
       - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+      
+      - name: Install nightly toolchain for cargo-gpu
         run: |
-          rustup default stable
-          rustup update
-          # Install nightly toolchain with required components for cargo-gpu
+          # cargo-gpu will auto-install its required toolchain version
+          # but we need a base nightly toolchain
           rustup toolchain install nightly
           rustup component add rust-src rustc-dev llvm-tools --toolchain nightly
       
