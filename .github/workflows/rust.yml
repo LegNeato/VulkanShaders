@@ -149,7 +149,11 @@ jobs:
       
       - name: Compile shaders to SPIR-V
         working-directory: shaders/rust
-        run: python3 compileshaders.py
+        run: |
+          if [ "${{ runner.os }}" == "Windows" ]; then
+            export PATH="$HOME/.cargo/bin:$PATH"
+          fi
+          python3 compileshaders.py
       
       - name: Verify no uncommitted changes
         shell: bash
