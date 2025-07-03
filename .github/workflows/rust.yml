@@ -147,13 +147,13 @@ jobs:
             ~/.cargo/git
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
       
+      - name: Set Windows PATH
+        if: runner.os == 'Windows'
+        run: echo "$env:USERPROFILE\.cargo\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+
       - name: Compile shaders to SPIR-V
         working-directory: shaders/rust
-        run: |
-          if [ "${{ runner.os }}" == "Windows" ]; then
-            export PATH="$HOME/.cargo/bin:$PATH"
-          fi
-          python3 compileshaders.py
+        run: python3 compileshaders.py
       
       - name: Verify no uncommitted changes
         shell: bash
