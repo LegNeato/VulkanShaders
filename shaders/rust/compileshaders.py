@@ -75,6 +75,8 @@ def compile_shader(shader_dir):
                 final_path = shader_dir / f"{shader_name}.{shader_type}.spv"
                 
                 # Just rename the file - the C++ code will look for the entry point by name
+                if final_path.exists():
+                    final_path.unlink()  # Remove existing file
                 source_path.rename(final_path)
                 print(f"  Created {final_path.name} (entry point: {entry_point})")
                 
@@ -105,6 +107,8 @@ def compile_shader(shader_dir):
                 old_path = shader_dir / old_name
                 new_path = shader_dir / new_name
                 if old_path.exists():
+                    if new_path.exists():
+                        new_path.unlink()  # Remove existing file
                     old_path.rename(new_path)
                     print(f"  Created {new_name}")
     else:
