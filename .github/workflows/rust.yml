@@ -1,0 +1,63 @@
+name: Rust CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  test:
+    name: Test Rust Shaders
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: "recursive"
+      
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rust-src, rustc-dev, llvm-tools
+      
+      - name: Install cargo-gpu
+        run: cargo install --git https://github.com/rust-gpu/cargo-gpu cargo-gpu
+      
+      - name: Cache cargo registry
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+      
+      - name: Compile shaders to SPIR-V
+        working-directory: shaders/rust
+        run: python3 compileshaders.py
+      
+      - name: Verify no uncommitted changes
+        run: |
+          # Check if there are any changes to tracked files
+          if ! git diff --exit-code; then
+            echo "Error: Generated SPIR-V files differ from checked-in versions"
+            echo "Please run 'python3 compileshaders.py' locally and commit the changes"
+            git diff --name-only
+            exit 1
+          fi
+          
+          # Check for untracked files
+          if [ -n "$(git ls-files --others --exclude-standard)" ]; then
+            echo "Error: New untracked files were generated"
+            echo "Please add these files to git or update .gitignore:"
+            git ls-files --others --exclude-standard
+            exit 1
+          fi
