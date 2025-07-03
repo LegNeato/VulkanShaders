@@ -144,9 +144,7 @@ jobs:
       
       - name: Compile shaders to SPIR-V
         working-directory: shaders/rust
-        shell: bash
-        run: |
-          python3 compileshaders.py
+        run: python3 compileshaders.py
       
       - name: Verify no uncommitted changes
         shell: bash
