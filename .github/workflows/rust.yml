@@ -112,13 +112,26 @@ jobs:
             echo "VK_ICD_FILENAMES=$SWIFTSHADER_DEST_DIR\vk_swiftshader_icd.json" >> $GITHUB_ENV
           fi
       
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          components: rust-src, rustc-dev, llvm-tools
+      - name: Install Rust via rustup
+        shell: bash
+        run: |
+          # Install rustup if not already installed
+          if ! command -v rustup &> /dev/null; then
+            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal
+            source "$HOME/.cargo/env"
+          fi
+          
+          # Install stable toolchain with required components
+          rustup toolchain install stable
+          rustup component add rust-src rustc-dev llvm-tools --toolchain stable
+          rustup default stable
       
       - name: Install cargo-gpu
+        shell: bash
         run: |
+          # Ensure cargo is in PATH
+          source "$HOME/.cargo/env" || true
+          
           # Set non-interactive mode to avoid raw mode issues in CI
           export CARGO_TERM_COLOR=never
           export CI=true
@@ -134,13 +147,18 @@ jobs:
       
       - name: Compile shaders to SPIR-V
         working-directory: shaders/rust
+        shell: bash
         run: |
+          # Ensure cargo is in PATH
+          source "$HOME/.cargo/env" || true
+          
           # Set non-interactive mode for cargo-gpu
           export CARGO_TERM_COLOR=never
           export CI=true
           python3 compileshaders.py
       
       - name: Verify no uncommitted changes
+        shell: bash
         run: |
           # Check if there are any changes to tracked files
           if ! git diff --exit-code; then
