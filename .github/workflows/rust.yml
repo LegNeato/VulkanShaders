@@ -41,15 +41,20 @@ jobs:
             sudo apt-get update -y -qq
             sudo apt install -y vulkan-tools libvulkan-dev
           elif [ "$RUNNER_OS" == "macOS" ]; then
+            VULKAN_INSTALL_DIR="$HOME/vulkan-sdk"
+            mkdir -p "$VULKAN_INSTALL_DIR"
+            cd "$RUNNER_TEMP"
             wget "https://sdk.lunarg.com/sdk/download/$VULKAN_SDK_VERSION/mac/vulkansdk-macos-$VULKAN_SDK_VERSION.dmg?Human=true" -O vulkan-sdk.dmg
             hdiutil attach vulkan-sdk.dmg
             # The volume is mounted as /Volumes/VulkanSDK
-            sudo /Volumes/VulkanSDK/InstallVulkan.app/Contents/MacOS/InstallVulkan --root $GITHUB_WORKSPACE/vulkansdk-macos-$VULKAN_SDK_VERSION --accept-licenses --default-answer --confirm-command install
+            sudo /Volumes/VulkanSDK/InstallVulkan.app/Contents/MacOS/InstallVulkan --root $VULKAN_INSTALL_DIR/vulkansdk-macos-$VULKAN_SDK_VERSION --accept-licenses --default-answer --confirm-command install
             hdiutil detach /Volumes/VulkanSDK
-            echo "VULKAN_SDK_PATH=$GITHUB_WORKSPACE/vulkansdk-macos-$VULKAN_SDK_VERSION" >> $GITHUB_ENV
-            echo "VULKAN_SDK=$GITHUB_WORKSPACE/vulkansdk-macos-$VULKAN_SDK_VERSION/macOS" >> $GITHUB_ENV
-            echo "DYLD_LIBRARY_PATH=$GITHUB_WORKSPACE/vulkansdk-macos-$VULKAN_SDK_VERSION/macOS/lib:$DYLD_LIBRARY_PATH" >> $GITHUB_ENV
-            echo "PATH=$GITHUB_WORKSPACE/vulkansdk-macos-$VULKAN_SDK_VERSION/macOS/bin:$PATH" >> $GITHUB_ENV
+            rm vulkan-sdk.dmg
+            echo "VULKAN_SDK_PATH=$VULKAN_INSTALL_DIR/vulkansdk-macos-$VULKAN_SDK_VERSION" >> $GITHUB_ENV
+            echo "VULKAN_SDK=$VULKAN_INSTALL_DIR/vulkansdk-macos-$VULKAN_SDK_VERSION/macOS" >> $GITHUB_ENV
+            echo "DYLD_LIBRARY_PATH=$VULKAN_INSTALL_DIR/vulkansdk-macos-$VULKAN_SDK_VERSION/macOS/lib:$DYLD_LIBRARY_PATH" >> $GITHUB_ENV
+            echo "PATH=$VULKAN_INSTALL_DIR/vulkansdk-macos-$VULKAN_SDK_VERSION/macOS/bin:$PATH" >> $GITHUB_ENV
+            cd "$GITHUB_WORKSPACE"
           elif [ "$RUNNER_OS" == "Windows" ]; then
             curl -L "https://sdk.lunarg.com/sdk/download/$VULKAN_SDK_VERSION/windows/VulkanSDK-$VULKAN_SDK_VERSION-Installer.exe?Human=true" -o vulkan-sdk.exe
             ./vulkan-sdk.exe --accept-licenses --default-answer --confirm-command install
@@ -67,7 +72,7 @@ jobs:
       - if: ${{ runner.os == 'macOS' && matrix.use_moltenvk == true }}
         name: Setup MoltenVK on macOS
         run: |
-          echo "VK_ICD_FILENAMES=$GITHUB_WORKSPACE/vulkansdk-macos-1.3.250.1/macOS/share/vulkan/icd.d/MoltenVK_icd.json" >> $GITHUB_ENV
+          echo "VK_ICD_FILENAMES=$HOME/vulkan-sdk/vulkansdk-macos-1.3.250.1/macOS/share/vulkan/icd.d/MoltenVK_icd.json" >> $GITHUB_ENV
       
       - name: Install SwiftShader
         if: ${{ matrix.use_swiftshader == true || runner.os == 'Linux' || runner.os == 'Windows' }}
@@ -77,7 +82,7 @@ jobs:
           SWIFTSHADER_MACOS_URL: https://github.com/nikitalita/swiftshader-builds/releases/download/1.0.0/swiftshader-vulkan-r6216.7997cbc34b-macos-10.15.zip
         shell: bash
         run: |
-          export SWIFTSHADER_DEST_DIR='${{ github.workspace }}/swiftshader'
+          export SWIFTSHADER_DEST_DIR='${{ runner.temp }}/swiftshader'
           mkdir -p $SWIFTSHADER_DEST_DIR
           if [ "$RUNNER_OS" == "Linux" ]; then
             wget ${{ env.SWIFTSHADER_LINUX_URL }} -O swiftshader.zip
