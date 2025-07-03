@@ -8,9 +8,6 @@ on:
     branches:
       - master
 
-env:
-  RUST_LOG: debug
-
 jobs:
   test:
     name: Test Rust Shaders - ${{ matrix.name }}
@@ -36,12 +33,14 @@ jobs:
           submodules: "recursive"
       
       - name: Install Vulkan SDK
-        if: ${{ runner.os != 'Linux' }}
         shell: bash
         env:
           VULKAN_SDK_VERSION: 1.3.250.1
         run: |
-          if [ "$RUNNER_OS" == "macOS" ]; then
+          if [ "$RUNNER_OS" == "Linux" ]; then
+            sudo apt-get update -y -qq
+            sudo apt install -y vulkan-tools libvulkan-dev
+          elif [ "$RUNNER_OS" == "macOS" ]; then
             wget "https://sdk.lunarg.com/sdk/download/$VULKAN_SDK_VERSION/mac/vulkansdk-macos-$VULKAN_SDK_VERSION.dmg?Human=true" -O vulkan-sdk.dmg
             hdiutil attach vulkan-sdk.dmg
             # The volume is mounted as /Volumes/VulkanSDK
@@ -59,14 +58,13 @@ jobs:
           fi
       
       - if: ${{ runner.os == 'Linux' }}
-        name: Install Vulkan SDK and software renderers on Linux
+        name: Install Linux graphics dependencies
         run: |
-          sudo apt-get update -y -qq
           sudo add-apt-repository ppa:kisak/turtle -y
           sudo apt-get update
-          sudo apt install -y xvfb libgl1-mesa-dri libxcb-xfixes0-dev mesa-vulkan-drivers vulkan-tools libvulkan-dev
+          sudo apt install -y xvfb libgl1-mesa-dri libxcb-xfixes0-dev mesa-vulkan-drivers
       
-      - if: ${{ matrix.use_moltenvk == true }}
+      - if: ${{ runner.os == 'macOS' && matrix.use_moltenvk == true }}
         name: Setup MoltenVK on macOS
         run: |
           echo "VK_ICD_FILENAMES=$GITHUB_WORKSPACE/vulkansdk-macos-1.3.250.1/macOS/share/vulkan/icd.d/MoltenVK_icd.json" >> $GITHUB_ENV
@@ -116,6 +114,7 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
       
       - name: Install nightly toolchain for cargo-gpu
+        shell: bash
         run: |
           # cargo-gpu will auto-install its required toolchain version
           # but we need a base nightly toolchain
@@ -141,8 +140,6 @@ jobs:
       - name: Compile shaders to SPIR-V
         working-directory: shaders/rust
         shell: bash
-        env:
-          RUST_LOG: debug
         run: |
           python3 compileshaders.py
       
