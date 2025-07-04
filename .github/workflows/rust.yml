@@ -56,10 +56,13 @@ jobs:
             echo "PATH=$VULKAN_INSTALL_DIR/vulkansdk-macos-$VULKAN_SDK_VERSION/macOS/bin:$PATH" >> $GITHUB_ENV
             cd "$GITHUB_WORKSPACE"
           elif [ "$RUNNER_OS" == "Windows" ]; then
+            cd "$RUNNER_TEMP"
             curl -L "https://sdk.lunarg.com/sdk/download/$VULKAN_SDK_VERSION/windows/VulkanSDK-$VULKAN_SDK_VERSION-Installer.exe?Human=true" -o vulkan-sdk.exe
             ./vulkan-sdk.exe --accept-licenses --default-answer --confirm-command install
+            rm vulkan-sdk.exe
             echo "VULKAN_SDK=C:\\VulkanSDK\\$VULKAN_SDK_VERSION" >> $GITHUB_ENV
             echo "PATH=$VULKAN_SDK\\Bin;$PATH" >> $GITHUB_ENV
+            cd "$GITHUB_WORKSPACE"
           fi
       
       - if: ${{ runner.os == 'Linux' }}
