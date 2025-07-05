@@ -141,11 +141,9 @@ pub fn main_fs(
     let mut cascade_index = 0u32;
     if in_view_pos.z < ubo.cascade_splits.x {
         cascade_index = 1;
-    }
-    if in_view_pos.z < ubo.cascade_splits.y {
+    } else if in_view_pos.z < ubo.cascade_splits.y {
         cascade_index = 2;
-    }
-    if in_view_pos.z < ubo.cascade_splits.z {
+    } else if in_view_pos.z < ubo.cascade_splits.z {
         cascade_index = 3;
     }
 
